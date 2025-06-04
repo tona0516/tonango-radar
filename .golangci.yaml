@@ -1,0 +1,35 @@
+version: "2"
+
+# https://golangci-lint.run/usage/linters/
+linters:
+  default: all
+  disable:
+    - wrapcheck
+    - forbidigo
+    - funlen
+    - wsl
+    - exhaustruct
+    - ireturn
+    - tagliatelle
+    - varnamelen
+    - noctx
+    - nlreturn
+    - testpackage
+    - asciicheck
+    - interfacebloat
+    - depguard
+    - gosmopolitan
+    - revive
+    - predeclared
+    - mnd
+    - bodyclose
+    - godox
+  exclusions:
+    paths:
+      - _test\.go
+  settings:
+    gosec:
+      excludes:
+        - G301
+        - G302
+        - G304
